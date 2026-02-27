@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip-O-India - Your Travel Business Growth Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #000;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Ultra Premium Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 15%, #FFB84D 30%, #4ECDC4 50%, #45B7D1 70%, #667eea 85%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 50px 20px;
+        }
+        
+        /* Animated travel icons background */
+        .hero::before {
+            content: "✈️ 🏔️ 🌴 🏖️ 🗺️ 🎒 🚢 🏝️ 🌅 🎡 🗼 🕌 ⛰️ 🏕️ 🚁 🎿 🏄 🧳 📸 🌍";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 8em;
+            opacity: 0.05;
+            animation: float-icons 120s linear infinite;
+            white-space: nowrap;
+        }
+        
+        @keyframes float-icons {
+            0% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(-20%) translateY(-10%); }
+            50% { transform: translateX(-40%) translateY(0); }
+            75% { transform: translateX(-60%) translateY(10%); }
+            100% { transform: translateX(-80%) translateY(0); }
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            max-width: 1200px;
+            animation: hero-entrance 1.5s ease;
+        }
+        
+        @keyframes hero-entrance {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .logo-section {
+            margin-bottom: 40px;
+        }
+        
+        .company-name {
+            font-size: 8em;
+            font-weight: 900;
+            color: white;
+            text-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 5px 5px 15px rgba(0,0,0,0.3),
+                            0 0 30px rgba(255,255,255,0.5);
+            }
+            50% {
+                text-shadow: 5px 5px 15px rgba(0,0,0,0.3),
+                            0 0 50px rgba(255,255,255,0.8),
+                            0 0 80px rgba(255,255,255,0.6);
+            }
+        }
+        
+        .tagline {
+            font-size: 3.5em;
+            color: white;
+            font-weight: 600;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            margin-bottom: 50px;
+            padding: 20px 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            display: inline-block;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+        
+        .hero-stat {
+            background: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255,255,255,0.3);
+            transition: all 0.4s ease;
+            animation: stat-float 3s ease-in-out infinite;
+        }
+        
+        .hero-stat:nth-child(1) { animation-delay: 0s; }
+        .hero-stat:nth-child(2) { animation-delay: 0.5s; }
+        .hero-stat:nth-child(3) { animation-delay: 1s; }
+        .hero-stat:nth-child(4) { animation-delay: 1.5s; }
+        
+        @keyframes stat-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .hero-stat:hover {
+            transform: scale(1.15) translateY(-10px);
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.6);
+        }
+        
+        .stat-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .stat-label {
+            font-size: 1.4em;
+            color: white;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+        
+        /* Colorful Section Divider */
+        .rainbow-divider {
+            height: 20px;
+            background: linear-gradient(90deg, 
+                #FF6B6B 0%, #FFB84D 20%, #4ECDC4 40%, 
+                #45B7D1 60%, #667eea 80%, #FF6B6B 100%);
+            animation: rainbow-shift 5s linear infinite;
+        }
+        
+        @keyframes rainbow-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 100px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-vibrant-1 {
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFA07A 100%);
+        }
+        
+        .section-vibrant-2 {
+            background: linear-gradient(135deg, #98FB98 0%, #00CED1 100%);
+        }
+        
+        .section-vibrant-3 {
+            background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+        }
+        
+        .section-vibrant-4 {
+            background: linear-gradient(135deg, #87CEEB 0%, #4169E1 100%);
+        }
+        
+        .section-vibrant-5 {
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+        }
+        
+        .section-title {
+            font-size: 5em;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            position: relative;
+            padding-bottom: 30px;
+            animation: title-entrance 1s ease;
+        }
+        
+        @keyframes title-entrance {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 8px;
+            background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #FFB84D);
+            border-radius: 4px;
+            animation: underline-grow 1.5s ease;
+        }
+        
+        @keyframes underline-grow {
+            from { width: 0; }
+            to { width: 200px; }
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 70px;
+            color: #34495e;
+            font-weight: 600;
+        }
+        
+        /* Lead Generation Pricing Section - ULTRA PREMIUM */
+        .lead-pricing-hero {
+            max-width: 1400px;
+            margin: 80px auto;
+            position: relative;
+        }
+        
+        .lead-intro {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 50px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lead-intro h3 {
+            font-size: 3.5em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .lead-intro p {
+            font-size: 1.8em;
+            color: #34495e;
+            line-height: 1.9;
+            font-weight: 500;
+        }
+        
+        .verification-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            padding: 25px 50px;
+            border-radius: 60px;
+            font-size: 1.8em;
+            font-weight: 700;
+            box-shadow: 0 15px 40px rgba(255,107,107,0.4);
+            animation: badge-bounce 2s ease-in-out infinite;
+        }
+        
+        .badge:nth-child(2) {
+            background: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);
+            animation-delay: 0.3s;
+        }
+        
+        .badge:nth-child(3) {
+            background: linear-gradient(135deg, #FFB84D 0%, #FFA07A 100%);
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes badge-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 60px;
+            margin-top: 70px;
+        }
+        
+        .pricing-tier {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+            border: 5px solid transparent;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-tier::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #FF6B6B, #FFB84D, #4ECDC4);
+        }
+        
+        .pricing-tier:hover {
+            transform: scale(1.08) translateY(-20px);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.25);
+            border-color: #FF6B6B;
+        }
+        
+        .tier-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .tier-minimum-badge {
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-top: 20px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        
+        .minimum-leads-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .lead-info-title {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .lead-info-section-wrapper {
+            text-align: center;
+            margin-top: 80px;
+            padding: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 30px;
+        }
+        
+        .tier-icon {
+            font-size: 6em;
+            margin-bottom: 20px;
+            display: block;
+            animation: rotate-icon 4s ease-in-out infinite;
+        }
+        
+        @keyframes rotate-icon {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+        }
+        
+        .tier-name {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .tier-volume {
+            font-size: 1.8em;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+        
+        .tier-price {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .price-amount {
+            font-size: 7em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .price-label {
+            font-size: 1.8em;
+            color: #7f8c8d;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .tier-features {
+            list-style: none;
+            margin: 40px 0;
+        }
+        
+        .tier-features li {
+            padding: 20px;
+            margin: 15px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .tier-features li:hover {
+            transform: translateX(10px);
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFA07A 100%);
+        }
+        
+        .tier-features li::before {
+            content: "✓";
+            font-size: 2em;
+            color: #27ae60;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .tier-example {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        
+        /* Services Grid - Ultra Colorful */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 50px;
+            margin-top: 80px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 35px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 8px solid transparent;
+        }
+        
+        .service-card:nth-child(1) {
+            border-top-color: #FF6B6B;
+        }
+        
+        .service-card:nth-child(2) {
+            border-top-color: #4ECDC4;
+        }
+        
+        .service-card:nth-child(3) {
+            border-top-color: #FFB84D;
+        }
+        
+        .service-card:nth-child(4) {
+            border-top-color: #667eea;
+        }
+        
+        .service-card:nth-child(5) {
+            border-top-color: #FF8E53;
+        }
+        
+        .service-card:nth-child(6) {
+            border-top-color: #45B7D1;
+        }
+        
+        .service-card:nth-child(7) {
+            border-top-color: #98FB98;
+        }
+        
+        .service-card:nth-child(8) {
+            border-top-color: #FF69B4;
+        }
+        
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+        }
+        
+        .service-icon {
+            font-size: 5em;
+            margin-bottom: 25px;
+            display: block;
+            animation: icon-pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes icon-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .service-card h3 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .service-card p {
+            font-size: 1.4em;
+            color: #7f8c8d;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+        
+        .service-features {
+            list-style: none;
+        }
+        
+        .service-features li {
+            padding: 12px 0;
+            font-size: 1.3em;
+            color: #34495e;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .service-features li::before {
+            content: "🔹";
+            font-size: 1.2em;
+        }
+        
+        .custom-cta {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+            animation: cta-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes cta-glow {
+            0%, 100% {
+                box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+            }
+            50% {
+                box-shadow: 0 15px 45px rgba(255,107,107,0.6);
+            }
+        }
+        
+        /* Why Choose Section */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 45px;
+            margin-top: 80px;
+        }
+        
+        .why-card {
+            background: white;
+            padding: 45px;
+            border-radius: 30px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .why-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .why-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 65px rgba(0,0,0,0.2);
+        }
+        
+        .why-icon {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .why-card h4 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .why-card p {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+        
+        /* Lead Info Badges */
+        .lead-info-badge {
+            font-size: 1.6em;
+            padding: 20px 35px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .lead-info-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Contact Section - Ultra Vibrant */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #FF6B6B 100%);
+            color: white;
+            padding: 120px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: "✈️🌍🏔️🎒📸🗺️";
+            position: absolute;
+            font-size: 15em;
+            opacity: 0.05;
+            animation: contact-float 20s linear infinite;
+        }
+        
+        @keyframes contact-float {
+            0% { transform: translateX(-50%) translateY(0); }
+            100% { transform: translateX(50%) translateY(50px); }
+        }
+        
+        .contact-section h2 {
+            font-size: 5em;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-section p {
+            font-size: 2em;
+            margin-bottom: 60px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.15);
+            padding: 50px;
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+            border: 3px solid rgba(255,255,255,0.3);
+            transition: all 0.4s ease;
+            min-width: 300px;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.12);
+            border-color: white;
+        }
+        
+        .contact-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .contact-label {
+            font-size: 1.5em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-value {
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            color: white;
+            padding: 35px 80px;
+            border-radius: 70px;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 80px;
+            transition: all 0.4s ease;
+            box-shadow: 0 20px 50px rgba(255,184,77,0.4);
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.15);
+            box-shadow: 0 30px 70px rgba(255,184,77,0.6);
+            background: linear-gradient(135deg, #FF8E53 0%, #FFB84D 100%);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 50px;
+            text-align: center;
+        }
+        
+        .footer p {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        /* Mobile Responsiveness - Enhanced */
+        @media (max-width: 1024px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 20px;
+            }
+            
+            .company-name {
+                font-size: 4.5em;
+            }
+            
+            .tagline {
+                font-size: 2.2em;
+                padding: 15px 25px;
+            }
+            
+            .hero-stats {
+                gap: 35px;
+            }
+            
+            .hero-stat {
+                padding: 30px;
+                min-width: 280px;
+            }
+            
+            .stat-number {
+                font-size: 3em;
+            }
+            
+            .section {
+                padding: 70px 30px;
+            }
+            
+            .section-title {
+                font-size: 3.5em;
+                letter-spacing: 2px;
+            }
+            
+            .section-subtitle {
+                font-size: 1.6em;
+            }
+            
+            .pricing-tiers {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .why-choose-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .contact-cards {
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px;
+            }
+            
+            .company-name {
+                font-size: 3em;
+                letter-spacing: 2px;
+            }
+            
+            .tagline {
+                font-size: 1.6em;
+                padding: 12px 20px;
+            }
+            
+            .hero-stats {
+                gap: 25px;
+            }
+            
+            .hero-stat {
+                padding: 25px 20px;
+                min-width: 240px;
+            }
+            
+            .stat-icon {
+                font-size: 3em;
+            }
+            
+            .stat-number {
+                font-size: 2.5em;
+            }
+            
+            .stat-label {
+                font-size: 1.2em;
+            }
+            
+            .section {
+                padding: 50px 20px;
+            }
+            
+            .section-title {
+                font-size: 2.5em;
+                letter-spacing: 1px;
+                padding-bottom: 20px;
+            }
+            
+            .section-title::after {
+                width: 120px;
+                height: 6px;
+            }
+            
+            .section-subtitle {
+                font-size: 1.3em;
+                margin-bottom: 40px;
+            }
+            
+            .lead-pricing-hero {
+                margin: 50px auto;
+            }
+            
+            .lead-intro {
+                padding: 35px 25px;
+                margin-bottom: 50px;
+            }
+            
+            .lead-intro h3 {
+                font-size: 2.5em;
+            }
+            
+            .lead-intro p {
+                font-size: 1.4em;
+            }
+            
+            .verification-badges {
+                gap: 20px;
+                margin: 35px 0;
+            }
+            
+            .badge {
+                padding: 18px 35px;
+                font-size: 1.4em;
+            }
+            
+            .pricing-tiers {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .pricing-tier {
+                padding: 40px 25px;
+                border-radius: 30px;
+            }
+            
+            .tier-icon {
+                font-size: 4.5em;
+            }
+            
+            .tier-name {
+                font-size: 2.2em;
+            }
+            
+            .tier-volume {
+                font-size: 1.4em;
+            }
+            
+            .tier-minimum-badge {
+                font-size: 1.2em;
+                padding: 10px 25px;
+            }
+            
+            .price-amount {
+                font-size: 5em;
+            }
+            
+            .price-label {
+                font-size: 1.5em;
+            }
+            
+            .tier-features li {
+                padding: 15px;
+                font-size: 1.2em;
+            }
+            
+            .tier-example {
+                padding: 25px 20px;
+                font-size: 1.4em;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .service-card {
+                padding: 35px 25px;
+                border-radius: 25px;
+            }
+            
+            .service-icon {
+                font-size: 4em;
+            }
+            
+            .service-card h3 {
+                font-size: 2em;
+            }
+            
+            .service-card p {
+                font-size: 1.2em;
+            }
+            
+            .service-features li {
+                font-size: 1.15em;
+            }
+            
+            .custom-cta {
+                padding: 18px 35px;
+                font-size: 1.3em;
+            }
+            
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .why-card {
+                padding: 35px 25px;
+            }
+            
+            .why-icon {
+                font-size: 3.5em;
+            }
+            
+            .why-card h4 {
+                font-size: 1.8em;
+            }
+            
+            .why-card p {
+                font-size: 1.2em;
+            }
+            
+            .contact-section {
+                padding: 70px 25px;
+            }
+            
+            .contact-section h2 {
+                font-size: 3em;
+            }
+            
+            .contact-section p {
+                font-size: 1.5em;
+            }
+            
+            .contact-cards {
+                gap: 30px;
+            }
+            
+            .contact-card {
+                padding: 35px 25px;
+                min-width: auto;
+            }
+            
+            .contact-icon {
+                font-size: 4em;
+            }
+            
+            .contact-label {
+                font-size: 1.3em;
+            }
+            
+            .contact-value {
+                font-size: 1.8em;
+            }
+            
+            .cta-button {
+                padding: 25px 50px;
+                font-size: 1.6em;
+                margin-top: 50px;
+            }
+            
+            .footer {
+                padding: 40px 25px;
+            }
+            
+            .footer p {
+                font-size: 1.2em;
+            }
+            
+            .lead-info-badge {
+                font-size: 1.3em;
+                padding: 15px 25px;
+            }
+            
+            .minimum-leads-banner {
+                font-size: 1.3em;
+                padding: 20px;
+            }
+            
+            .lead-info-title {
+                font-size: 2em;
+            }
+            
+            .lead-info-section-wrapper {
+                margin-top: 50px;
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-name {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+            
+            .tagline {
+                font-size: 1.3em;
+                padding: 10px 15px;
+            }
+            
+            .hero-stat {
+                padding: 20px 15px;
+                min-width: 200px;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .section-title::after {
+                width: 80px;
+            }
+            
+            .lead-intro h3 {
+                font-size: 2em;
+            }
+            
+            .lead-intro p {
+                font-size: 1.2em;
+            }
+            
+            .badge {
+                padding: 15px 25px;
+                font-size: 1.2em;
+            }
+            
+            .pricing-tier {
+                padding: 30px 20px;
+            }
+            
+            .tier-name {
+                font-size: 1.8em;
+            }
+            
+            .tier-minimum-badge {
+                font-size: 1em;
+                padding: 8px 20px;
+            }
+            
+            .price-amount {
+                font-size: 4em;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .service-card h3 {
+                font-size: 1.8em;
+            }
+            
+            .contact-section h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta-button {
+                padding: 20px 40px;
+                font-size: 1.4em;
+            }
+            
+            .lead-info-badge {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+            
+            .minimum-leads-banner {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+            
+            .lead-info-title {
+                font-size: 1.6em;
+            }
+            
+            .lead-info-section-wrapper {
+                margin-top: 40px;
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Ultra Premium Hero -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="logo-section">
+                    <div class="company-name">🌍 TRIP-O-INDIA</div>
+                    <div class="tagline">Your Travel Business Growth Partner</div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-icon">✈️</span>
+                        <div class="stat-number">8000+</div>
+                        <div class="stat-label">Travelers Booked</div>
+                    </div>
+                    
+                    <div class="hero-stat">
+                        <span class="stat-icon">🏆</span>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Clients Served</div>
+                    </div>
+                    
+                    <div class="hero-stat">
+                        <span class="stat-icon">📈</span>
+                        <div class="stat-number">50%+</div>
+                        <div class="stat-label">Lead Conversion</div>
+                    </div>
+                    
+                    <div class="hero-stat">
+                        <span class="stat-icon">💎</span>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Retention</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rainbow-divider"></div>
+
+        <!-- Lead Generation Section -->
+        <div class="section section-vibrant-1">
+            <h2 class="section-title">🎯 Verified Lead Generation</h2>
+            <p class="section-subtitle">Premium Quality Leads That Actually Convert</p>
+            
+            <div class="lead-pricing-hero">
+                <div class="lead-intro">
+                    <h3>Double-Verified Exclusive Leads</h3>
+                    <p>Every single lead is <strong>OTP verified + Call verified</strong> before delivery. 100% exclusive to the business - never shared with competitors. Real travelers, real interest, ready to book!</p>
+                    
+                    <div class="minimum-leads-banner">
+                        📊 Minimum Order: 50 Leads | Pricing Based on Volume
+                    </div>
+                    
+                    <div class="verification-badges">
+                        <div class="badge">📱 OTP Verified</div>
+                        <div class="badge">📞 Call Verified</div>
+                        <div class="badge">🔒 100% Exclusive</div>
+                    </div>
+                </div>
+
+                <div class="pricing-tiers">
+                    <!-- Tier 1 -->
+                    <div class="pricing-tier">
+                        <div class="tier-header">
+                            <span class="tier-icon">🚀</span>
+                            <div class="tier-name">Starter Volume</div>
+                            <div class="tier-volume">Below 150 Leads/Month</div>
+                            <div class="tier-minimum-badge">
+                                Minimum: 50 Leads
+                            </div>
+                        </div>
+                        
+                        <div class="tier-price">
+                            <div class="price-amount">₹150</div>
+                            <div class="price-label">Per Lead</div>
+                        </div>
+                        
+                        <ul class="tier-features">
+                            <li>OTP + Call Verified</li>
+                            <li>Complete Traveler Information</li>
+                            <li>100% Exclusive (Non-Shared)</li>
+                            <li>Pan-India Coverage</li>
+                            <li>Travel Preferences Captured</li>
+                            <li>Budget Qualified Prospects</li>
+                        </ul>
+                        
+                        <div class="tier-example">
+                            <strong>Example:</strong> 100 Leads = ₹15,000/month<br>
+                            <span style="font-size: 0.85em; opacity: 0.9; display: block; margin-top: 10px;">
+                                (Minimum 50 leads = ₹7,500/month)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="pricing-tier">
+                        <div class="tier-header">
+                            <span class="tier-icon">💰</span>
+                            <div class="tier-name">High Volume</div>
+                            <div class="tier-volume">150+ Leads/Month</div>
+                            <div class="tier-minimum-badge" style="background: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);">
+                                Minimum: 50 Leads
+                            </div>
+                        </div>
+                        
+                        <div class="tier-price">
+                            <div class="price-amount">₹110</div>
+                            <div class="price-label">Per Lead</div>
+                        </div>
+                        
+                        <ul class="tier-features">
+                            <li>Everything in Starter Volume</li>
+                            <li>Volume Discount Pricing</li>
+                            <li>Priority Support</li>
+                            <li>Faster Delivery</li>
+                            <li>Dedicated Account Manager</li>
+                            <li>Monthly Performance Reports</li>
+                        </ul>
+                        
+                        <div class="tier-example">
+                            <strong>Example:</strong> 200 Leads = ₹22,000/month<br>
+                            <span style="font-size: 0.85em; opacity: 0.9; display: block; margin-top: 10px;">
+                                (150 leads minimum at this rate = ₹16,500/month)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead-info-section-wrapper">
+                    <h3 class="lead-info-title">
+                        What Information Comes with Each Lead?
+                    </h3>
+                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
+                        <div class="lead-info-badge">
+                            👤 Full Name
+                        </div>
+                        <div class="lead-info-badge">
+                            📱 Phone Number
+                        </div>
+                        <div class="lead-info-badge">
+                            📧 Email Address
+                        </div>
+                        <div class="lead-info-badge">
+                            🗺️ Travel Preferences
+                        </div>
+                        <div class="lead-info-badge">
+                            📅 Timeline & Budget
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rainbow-divider"></div>
+
+        <!-- Complete Services Section -->
+        <div class="section section-vibrant-2">
+            <h2 class="section-title">🎨 Complete Digital Marketing Solutions</h2>
+            <p class="section-subtitle">Customized packages for every travel business need</p>
+            
+            <div style="text-align: center; max-width: 1000px; margin: 0 auto 80px auto; padding: 50px; background: rgba(255,255,255,0.5); border-radius: 30px;">
+                <h3 style="font-size: 3em; color: #2c3e50; margin-bottom: 20px; font-weight: 800;">
+                    ✨ Every Business is Unique
+                </h3>
+                <p style="font-size: 1.8em; color: #34495e; line-height: 1.9;">
+                    Share requirements and we'll customize the perfect package with the best pricing. From single services to complete marketing solutions - we've got it all covered!
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Video Production -->
+                <div class="service-card">
+                    <span class="service-icon">🎬</span>
+                    <h3>Video Production & Editing</h3>
+                    <p>Professional travel videos that inspire bookings and drive engagement across all platforms.</p>
+                    <ul class="service-features">
+                        <li>Reels, Shorts & YouTube Videos</li>
+                        <li>Complete Editing & Effects</li>
+                        <li>SEO Optimization</li>
+                        <li>Multi-Platform Upload</li>
+                        <li>Thumbnail Creation</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- Social Media Management -->
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>Social Media Management</h3>
+                    <p>Complete social media presence management to keep audience engaged and packages selling.</p>
+                    <ul class="service-features">
+                        <li>Facebook, Instagram, YouTube</li>
+                        <li>LinkedIn & X (Twitter)</li>
+                        <li>Content Creation & Posting</li>
+                        <li>Professional Captions & Hashtags</li>
+                        <li>Engagement Management</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- SEO Content Writing -->
+                <div class="service-card">
+                    <span class="service-icon">✍️</span>
+                    <h3>SEO Content Writing</h3>
+                    <p>Rank-optimized travel content that drives organic traffic and converts readers to customers.</p>
+                    <ul class="service-features">
+                        <li>Destination Guides</li>
+                        <li>Package Descriptions</li>
+                        <li>Blog Posts & Articles</li>
+                        <li>RankMath Optimized</li>
+                        <li>Keyword Research Included</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- Website Services -->
+                <div class="service-card">
+                    <span class="service-icon">🌐</span>
+                    <h3>Website Services</h3>
+                    <p>Professional travel websites that showcase packages beautifully and convert visitors to bookings.</p>
+                    <ul class="service-features">
+                        <li>Website Design & Development</li>
+                        <li>Mobile-Responsive Design</li>
+                        <li>Booking Integration</li>
+                        <li>Speed Optimization</li>
+                        <li>Maintenance & Updates</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- Branding & Design -->
+                <div class="service-card">
+                    <span class="service-icon">🎨</span>
+                    <h3>Branding & Logo Design</h3>
+                    <p>Create memorable travel brand identities that stand out and build trust with travelers.</p>
+                    <ul class="service-features">
+                        <li>Logo Design</li>
+                        <li>Brand Identity Development</li>
+                        <li>Marketing Collateral</li>
+                        <li>Social Media Graphics</li>
+                        <li>Print Materials</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- Google Ads -->
+                <div class="service-card">
+                    <span class="service-icon">🎯</span>
+                    <h3>Google Ads Management</h3>
+                    <p>Targeted advertising campaigns that put travel packages in front of ready-to-book travelers.</p>
+                    <ul class="service-features">
+                        <li>Campaign Strategy & Setup</li>
+                        <li>Keyword Research</li>
+                        <li>Ad Copywriting</li>
+                        <li>Budget Optimization</li>
+                        <li>Performance Tracking</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- Facebook Marketing -->
+                <div class="service-card">
+                    <span class="service-icon">📘</span>
+                    <h3>Facebook Marketing</h3>
+                    <p>Grow Facebook presence organically and through paid campaigns to reach more travelers.</p>
+                    <ul class="service-features">
+                        <li>Page Promotion & Growth</li>
+                        <li>Lead Generation Campaigns</li>
+                        <li>Ad Management</li>
+                        <li>Audience Targeting</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+
+                <!-- UGC Content -->
+                <div class="service-card">
+                    <span class="service-icon">📸</span>
+                    <h3>UGC Content Creation</h3>
+                    <p>Authentic user-generated style content that builds trust and drives engagement.</p>
+                    <ul class="service-features">
+                        <li>UGC-Style Videos</li>
+                        <li>Testimonial Content</li>
+                        <li>Customer Story Videos</li>
+                        <li>Authentic Storytelling</li>
+                        <li>Social Proof Content</li>
+                    </ul>
+                    <div class="custom-cta">📞 Contact for Custom Quote</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 100px; padding: 60px; background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); border-radius: 40px; color: white;">
+                <h3 style="font-size: 4em; margin-bottom: 30px; font-weight: 900;">
+                    🚀 Ready to Customize a Package?
+                </h3>
+                <p style="font-size: 2em; margin-bottom: 40px; opacity: 0.95;">
+                    Share business requirements and we'll create a perfect solution with transparent pricing!
+                </p>
+                <a href="https://wa.me/918017417662?text=Hi%20Trip-O-India,%20I'd%20like%20to%20discuss%20customized%20digital%20marketing%20solutions%20for%20my%20travel%20business!" style="display: inline-block; background: white; color: #FF6B6B; padding: 30px 70px; border-radius: 60px; font-size: 2em; font-weight: bold; text-decoration: none; box-shadow: 0 15px 45px rgba(0,0,0,0.2);">
+                    💬 Get Custom Quote
+                </a>
+            </div>
+        </div>
+
+        <div class="rainbow-divider"></div>
+
+        <!-- Why Choose Section -->
+        <div class="section section-vibrant-3">
+            <h2 class="section-title">🏆 Why Travel Businesses Choose Us</h2>
+            <p class="section-subtitle">Results that speak louder than promises</p>
+            
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <span class="why-icon">🎯</span>
+                    <h4>Travel Industry Specialists</h4>
+                    <p>5+ years exclusively working with travel businesses. Deep understanding of what sells packages and converts travelers.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">✅</span>
+                    <h4>Double Verification</h4>
+                    <p>Every lead OTP + call verified before delivery. No time wasted on fake numbers or uninterested prospects.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">🔒</span>
+                    <h4>100% Exclusive Leads</h4>
+                    <p>Leads belong to the business alone. Never shared, never resold to competitors. Complete exclusivity guaranteed.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">📈</span>
+                    <h4>50%+ Conversion Rate</h4>
+                    <p>Verified leads convert at 50%+ rate vs industry average of 10-15%. Quality over quantity always wins.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">💎</span>
+                    <h4>98% Client Retention</h4>
+                    <p>Clients stay because results speak. 98% retention rate proves consistent quality and reliable service delivery.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">🌍</span>
+                    <h4>8000+ Bookings Generated</h4>
+                    <p>Over 8000 travelers have booked through campaigns. Real results, real bookings, real business growth.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">⚡</span>
+                    <h4>Fast Turnaround</h4>
+                    <p>Quick response times, regular delivery, no delays. Business can't wait - neither do we.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">🤝</span>
+                    <h4>Partnership Approach</h4>
+                    <p>Not just a service provider - a growth partner. Business success is our success. Long-term thinking always.</p>
+                </div>
+                
+                <div class="why-card">
+                    <span class="why-icon">💰</span>
+                    <h4>Transparent Pricing</h4>
+                    <p>No hidden costs, no surprises. Clear pricing, honest quotes, straightforward terms. Trust built on transparency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rainbow-divider"></div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>Let's Grow the Travel Business Together! 🚀</h2>
+            <p>Ready for verified leads and complete digital marketing solutions?</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <span class="contact-icon">👤</span>
+                    <div class="contact-label">Connect With</div>
+                    <div class="contact-value">Shreya Mukherjee</div>
+                    <div style="margin-top: 15px; font-size: 1.3em;">Founder & CEO</div>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">📱</span>
+                    <div class="contact-label">Call or WhatsApp</div>
+                    <div class="contact-value">+91 80174 17662</div>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0470766d746b6d6a606d65707665726168446369656d682a676b69">[email&#160;protected]</a></div>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/918017417662?text=Hi%20Trip-O-India,%20I'm%20interested%20in%20growing%20my%20travel%20business!" class="cta-button">
+                💬 Let's Talk Growth
+            </a>
+            
+            <p style="margin-top: 80px; font-size: 1.8em;">
+                ✈️ Verified Leads | 🎬 Video Production | 📱 Social Media | 🌐 Complete Solutions
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p style="font-size: 1.8em; margin-bottom: 25px;">
+                <strong>🌍 Trip-O-India</strong> - Your Travel Business Growth Partner
+            </p>
+            <p style="font-size: 1.4em;">
+                Specialized in Travel Industry Digital Marketing & Lead Generation
+            </p>
+            <p style="margin-top: 30px; opac
